@@ -1,0 +1,19 @@
+﻿@model ScarpeApp.Models.Articolo
+<div class="row d-flex"> 
+<h1>@Model.Nome</h1>
+<img src="@Model.ImmagineCopertina" alt="Immagine @Model.Nome" class="img-fluid my-2" style="max-width: 500px; max-height: 580px">
+<p class="fs-5 my-2"><strong class="fs-5 my-2">Prezzo: </strong>@Model.Prezzo.ToString("C")</p>
+<p class="fs-5 mb-2"><strong class="fs-5 mb-2">Descrizione: </strong>@Model.Descrizione</p>
+
+</div>
+
+<h3 class="mt-4 mb-3 fw-bold">Altre Immagini</h3>
+<div class="row">
+    <div class="col-md-6 my-3">
+		<img src="@Model.ImmagineAggiuntiva1" alt="Immagine aggiuntiva 1" class="img-fluid me-2" style="max-width: 300px"> 
+        <img src="@Model.ImmagineAggiuntiva2" alt="Immagine aggiuntiva 2" class="img-fluid" style="max-width: 300px">
+    </div>
+    
+</div>
+<a href="@Url.Action("Index", "Articoli")" class="btn btn-secondary mt-3">Torna alla Vetrina</a>
+
