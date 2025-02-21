@@ -18,5 +18,22 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    
+}
+
+.containerVetrina {
+    padding: 35px 100px;
+    margin: 0;
+    background-image: url("https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/eu_campus_adicolor_originals_ss25_launch_plp_iwp_background_d_b8da793f37.jpg");
+    background-repeat: repeat-y;
+}
+
+.footer, .header {
+    background-color: #12080A;
+}
+
+.borderCarta {
+    border: 2px solid gray;
+    border-radius: 10px;
 }

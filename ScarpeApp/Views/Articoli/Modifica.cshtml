@@ -1,0 +1,42 @@
+﻿@model ScarpeApp.Models.Articolo
+
+@{
+    ViewData["Title"] = "Modifica Articolo";
+}
+
+<h2 class="fw-bold py-3">Modifica Articolo</h2>
+
+<form asp-action="ModificaConferma" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group my-2">
+        <label asp-for="Nome" class="control-label"></label>
+        <input asp-for="Nome" class="form-control" />
+        <span asp-validation-for="Nome" class="text-danger"></span>
+    </div>
+
+    <div class="form-group my-2">
+        <label asp-for="Prezzo" class="control-label"></label>
+        <input asp-for="Prezzo" class="form-control" type="number" step="0.01" />
+        <span asp-validation-for="Prezzo" class="text-danger"></span>
+    </div>
+
+
+    <div class="form-group my-2">
+        <label asp-for="Descrizione" class="control-label"></label>
+        <input asp-for="Descrizione" class="form-control" />
+        <span asp-validation-for="Descrizione" class="text-danger"></span>
+    </div>
+
+    <div class="form-group my-2">
+        <label asp-for="ImmagineCopertina" class="control-label"></label>
+        <input asp-for="ImmagineCopertina" class="form-control" />
+        <span asp-validation-for="ImmagineCopertina" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary my-3">Salva Modifiche</button>
+</form>
+
+<a asp-action="Dettaglio" asp-route-id="@Model.Id" class="btn btn-secondary mb-3">Annulla</a>
+
+
+

@@ -66,5 +66,17 @@ namespace ScarpeApp.Models
         {
             return articoli.Find(a => a.Id == id);
         }
+
+        public static void UpdateArticolo(Articolo articoloModificato)
+        {
+            var articolo = articoli.FirstOrDefault(a => a.Id == articoloModificato.Id);
+            if (articolo != null)
+            {
+                articolo.Nome = articoloModificato.Nome;
+                articolo.Prezzo = articoloModificato.Prezzo;
+                articolo.Descrizione = articoloModificato.Descrizione;
+                articolo.ImmagineCopertina = articoloModificato.ImmagineCopertina;
+            }
+        }
     }
 }

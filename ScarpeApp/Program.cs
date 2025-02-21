@@ -1,3 +1,7 @@
+using Microsoft.AspNetCore.Localization;
+using Microsoft.Extensions.Options;
+using System.Globalization;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -22,7 +26,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-        pattern: "{controller=Articoli}/{action=Index}/{id?}");
-     
+    pattern: "{controller=Articoli}/{action=Index}/{id?}");
 
 app.Run();
+

@@ -20,5 +20,25 @@ namespace ScarpeApp.Controllers
             }
             return View(articolo);
         }
+
+        public IActionResult Modifica(int id)
+        {
+            var articolo = Magazzino.GetArticoloById(id);
+            if (articolo == null) return NotFound();
+
+            return View(articolo);
+        }
+
+        [HttpPost]
+        public IActionResult ModificaConferma(Articolo articoloModificato)
+        {
+            
+            Magazzino.UpdateArticolo(articoloModificato);
+
+            return RedirectToAction("Dettaglio", new { id = articoloModificato.Id });
+        }
+
+
+
     }
 }
